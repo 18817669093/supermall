@@ -3,7 +3,7 @@ import {request} from './request';
 export function getDetaill(iid) {
   return request({
     url: '/detail',
-    params: {
+    params: {  //就是get请求后面追加的参数拼接
       iid,
     }
   })
@@ -15,7 +15,7 @@ export function getRecommend() {
   })
 }
 
-export class Goods {
+export class Goods {          //将获取的数据放在一个类中，方便使用
   constructor(itemInfo, columns, services) {
     this.title = itemInfo.title;
     this.desc = itemInfo.desc;
@@ -29,7 +29,7 @@ export class Goods {
 }
 
 
-export class Shop {
+export class Shop {         //店铺信息
   constructor(shopInfo) {
     this.logo = shopInfo.shopLogo;
     this.name = shopInfo.name;
@@ -42,7 +42,7 @@ export class Shop {
 
 
 export class GoodsParam {
-  constructor(info, rule) {
+  constructor(info, rule) { 
     // 注: images可能没有值(某些商品有值, 某些没有值)
     this.image = info.images ? info.images[0] : '';
     this.infos = info.set;

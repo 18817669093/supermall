@@ -1,9 +1,9 @@
-import Vue from "vue"
-import VueRouter from "vue-router"
+import Vue from "vue"      
+import VueRouter from "vue-router"   //导入
 
-Vue.use(VueRouter)
+Vue.use(VueRouter)    //使用
 
-const routes = [
+const routes = [      //配置映射关系
   {
   	path: '',
   	redirect: '/home'
@@ -24,12 +24,16 @@ const routes = [
   	path: '/category',
   	component: () => import('../views/category/Category')
   }, 
+  {
+    path: '/detail',
+    component: () => import('../views/detail/Detail')
+  }, 
  ]
 
 
-const router = new VueRouter({
+const router = new VueRouter({     //创建实例
 	routes,
 	mode:'history'
 })
 
-export default router
+export default router     //导出 在main.js中使用

@@ -12,7 +12,7 @@
       </div>
     </div>
 </template>
-
+            //轮播图组件
 <script>
 	export default {
 		name: "Swiper",

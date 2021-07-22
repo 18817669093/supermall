@@ -1,7 +1,9 @@
 <template>
   <div id="app"> 
+    <keep-alive>
     <router-view>
     </router-view>
+    </keep-alive>
     <main-tab-bar/>
   </div>
 </template>
@@ -10,7 +12,7 @@
 import MainTabBar from 'components/content/mainTabbar/MainTabBar'
 
 
-  export default {
+  export default {   
     name: 'App',
     components: {
       MainTabBar
@@ -26,6 +28,6 @@ import MainTabBar from 'components/content/mainTabbar/MainTabBar'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
